@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="pink background.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker Pro</title>
+    <script type="module" crossorigin src="/assets/index-3f9eeb4d.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>FCM Token Generator</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging-compat.js"></script>
+</head>
+<body>
+  <h2>Click to Generate FCM Token</h2>
+  <button onclick="requestPermission()">Get FCM Token</button>
+  <pre id="output"></pre>
+
+  <script>
+    const VAPID_KEY = 'BO3LhntojabkoNi8hNmpt0fX5xzje7UfgXJq1vPLjNDBZxO9aPNh4zlHWCYkIdLsIaOR2CeiEk10NTH-CO5RnWU';
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyATMiR8CS4AnakWH1OiEgTAerz_3enZlI0",
+      authDomain: "tasktrackerapp-53ff4.firebaseapp.com",
+      projectId: "tasktrackerapp-53ff4",
+      storageBucket: "tasktrackerapp-53ff4.appspot.com",
+      messagingSenderId: "81679096125",
+      appId: "1:81679096125:web:2226e278e5d7ce6944cd54",
+    };
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+
+    navigator.serviceWorker.register("firebase-messaging-sw.js")
+      .then((registration) => {
+        console.log("Service worker registered");
+        
+        requestPermission();
+      })
+      .catch((err) => {
+        console.error(" Service worker registration failed:", err);
+      });
+
+    function requestPermission() {
+      Notification.requestPermission().then((permission) => {
+        if (permission === 'granted') {
+          messaging.getToken({ vapidKey: VAPID_KEY })
+            .then((token) => {
+              if (token) {
+                document.getElementById('output').textContent = token;
+                console.log("Token generated:", token);
+              } else {
+                console.warn("Token not available. Check browser permissions.");
+              }
+            })
+            .catch((err) => {
+              console.error(" Token error:", err);
+            });
+        } else {
+          console.warn(" Notification permission not granted");
+        }
+      });
+    }
+  </script>
+</body>
+</html> -->
